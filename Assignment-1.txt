@@ -1,0 +1,490 @@
+Assignment-1
+
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+
+DATE COMMAND
+
+date --- Tue Sep  8 16:31:34 IST 2020
+date +%a ----Tue
+date +%A ---Tuesday
+date +%b ---Sep
+date +%B---September
+date +%d---08
+date +%D---09/08/20
+date +%f(it will not give us any output)----%f
+date +%F----2020-09-08
+date +%t(it will not give us any output)
+
+date +%T----16:34:10
+date +%B" "+%d" "+%y---September +08 +20
+date +%B" "%d" "%y (spaces " " between output)---September 08 20
+date +%B%d%y----September0820
+date +%B" "%d" "%Y----September 08 2020
+date +%B" "%d" "%y" "%t(Here small t is doesnot gives any time)----September 08 20
+date +%B" "%d" "%y" "%T----September 08 20 16:36:57
+
+
+CALENDAR COMMAND
+
+ cal
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+cal sep 2020
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+cal jan 2020
+    January 2020
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+cal january 2020
+    January 2020
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+ cal -m1 2020
+    January 2020
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+cal -3
+    August 2020          September 2020         October 2020
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                   1         1  2  3  4  5               1  2  3
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  11 12 13 14 15 16 17
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  18 19 20 21 22 23 24
+23 24 25 26 27 28 29  27 28 29 30           25 26 27 28 29 30 31
+30 31
+cal -1
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+
+ECHO COMMAND
+
+
+echo  Shweta Rohidas
+ Shweta Rohidas
+echo -e "Shweta \bRohidas"
+ShwetaRohidas
+echo -e "Shweta\nRohidas"
+Shweta
+Rohidas
+echo -e "Shweta \tRohidas"
+Shweta    Rohidas
+echo *
+ abc shell1.sh demo.txt
+
+WHOAMI COMMAND
+
+whoami
+shweta
+whoami --version
+whoami (GNU coreutils) 8.30
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Richard Mlynarik.
+
+
+UNAME COMMAND
+
+uname
+Linux
+
+uname -a
+Linux DESKTOP-KGRVDIR 4.4.0-19041-Microsoft #1-Microsoft Fri Dec 06 14:06:00 PST 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+uname -r
+4.4.0-19041-Microsoft
+
+uname -s
+Linux
+
+uname -n
+DESKTOP-KGRVDIR
+
+uname -v
+#1-Microsoft Fri Dec 06 14:06:00 PST 2019
+
+uname -m
+x86_64
+
+uname -p
+x86_64
+
+uname -i
+x86_64
+
+uname -o
+GNU/Linux
+
+
+SEQUENCE COMMAND
+
+seq 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+seq 3 2 35
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+
+seq -s " " 10
+1 2 3 4 5 6 7 8 9 10
+
+seq -s " " 5 10
+5 6 7 8 9 10
+
+ seq -s " " 5 5 25
+5 10 15 20 25
+
+seq -w 10
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+
+ seq -w 10 40 120
+010
+050
+090
+
+seq -w 10 40 130
+010
+050
+090
+130
+
+
+
+Q2.A) Create three directory a b and c and create a.txt,b.txt and c.txt
+in each directory respectively and then copy c directory into the a.
+
+mkdir a b c
+touch a.txt
+touch b.txt
+touch c.txt
+cp -r c a
+
+B)Move Directory b to c.
+mv b c
+
+C)Create alias of ls -lh command to your name.
+alias shweta="ls -lh"
+
+D)Change Directory name a to cdac.
+ mv a cdac
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+file5.txt with some text inside it. Search for 's' character
+inside all the files using grep command.
+Also Use cat to view all file content together.
+
+cat > file1.txt 
+cat > file2.txt 
+cat > file3.txt 
+cat > file4.txt 
+cat > file5.txt 
+grep "s" *.txt
+cat file1.txt file2.txt file3.txt file4.txt file5.txt
+
+B)Create file.txt using cat and edit that using nano editor.
+cat>file.txt
+nano file.txt
+cat file.txt
+
+
+c)Create 5 empty files using touch command
+touch s1 s2 s3 s4 s5
+
+D)Remove previously created directory a , b and c
+ rm -r a
+rm -r c
+rm -r b
+
+Q4. Create a file with some content using vi editor
+a) Display the file using cat command
+cat f1.text
+
+b) Display line numbers along with content
+cat -n f1.text
+1  Hello are you there?
+
+c) Display the file in reverse order using tac
+cat > f2
+shweta
+rohidas
+tac f2
+rohidas
+shweta
+
+d) Combine multiple files using cat command
+cat f1.text >> abc.txt
+cat abc.txt
+hello i am here
+How are you?
+
+
+Q5. Create Random some files and sub 
+
+a) display files row wise, column wise, 1 per row
+ls -1
+
+b) sort the files in ascending, descending order
+ls -1   (sort by name asc)
+ls -1 -r (sort by name desc)
+ls -al -S (sort by size desc)
+ls -al -Sr (sort by size asc)
+
+
+
+c) Create some hidden files and sub directories and display them using “ls -a”
+
+touch .twinkle.txt
+ls -a
+
+d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+
+
+
+e) Recursive display contents of your home directory.
+ls -R
+
+f) display all attributes of files and directories using ls -l
+ ls -l
+
+g) display attributes of a directory using ls -ld
+ls -ld
+
+
+Q1. Create directory of your name and then create 4 files inside it named
+a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+only user and also files permission to only user such that
+
+a)user can read and write the file a.txt and b.txt
+touch a.txt b.txt c.txt d.sh
+chmod 700 a.txt
+chmod 700 b.txt
+
+b)user can write the file c.txt
+chmod u-r c.txt
+
+c)user can exectuable the file d.sh. Make
+Contents of file d.sh:
+#/bin/sh
+ls -lh
+vi d.sh
+
+
+Q2. Change the permission of the previous directory to executable only.
+Analyze the output.
+chmod u=x d.sh
+
+Q3. Change the permission of the previous directory to read only.
+Analyze the output.
+chmod u=r d.sh
+
+Q4. Use echo to list the all files of your home directory.
+echo *
+
+Q5. Use echo to list the all files of /etc/ directory
+echo */*
+
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+echo *.conf
+
+Q7. Use echo to append your name to a.txt
+echo SHWETA >> a.txt
+
+==================================================================================
+
+1.Create Three level nested directory a,b and c
+mkdir a b c
+
+a)Create at least one hidden file in each directory
+touch .h1 
+touch .h2
+touch .h3
+
+b)Create at least one normal text file in each directory
+
+touch n1.txt
+touch n2
+touch n3
+
+c)Copy c into a
+ cp -r c a
+
+d)Copy file inside a into b
+cp -r b/n2 a
+
+
+2.Change the third level directory c permission to read only
+chmod a+r b/c
+
+3.Try copying third level c directory to outside of a
+cp b/c ../
+
+4.Create the directory  “data“ inside b
+mkdir b/data
+
+5.Change the permission of b to read and write only
+chmod u+rw b
+
+6.Create directory “data2”  inside b
+b/data2
+
+7.Create data.txt file inside b
+touch b/data.txt
+
+8.Rename the second level directory c to copied_dir
+ mv b copied_dir
+
+9.Change permission of copied_dir to only executable
+chmod u+x copied_dir
+
+10.Try ls on copied_dir
+ls: cannot open directory '.': Permission denied
+
+11.Try moving copied_dir to outside of a
+cannot move dir to outside because of restriced permissions
+
+12.Try moving data directory outside of a
+ mv data c
+mv: cannot stat 'data': No such file or directory
+
+13.Now change the owner of the directory a to root
+
+
+14.Change permission of a to read write and executable to only user
+chmod u+rwx a
+
+
+15.Try creating directory sample inside a
+mkdir sample
+
+16.Create directory x outside a
+mkdir x
+
+17.Try moving x inside a
+ mv x a
+
+18.Create directory movies
+mkdir movies
+
+19.Change group of movies to sudo
+groupadd movies
+groupadd: Permission denied.
+
+
+20.Change group of movies to avahi
+groupadd movies
+groupadd: Permission denied.
+
+
+25.Try deleting the file
+rm -r a b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
